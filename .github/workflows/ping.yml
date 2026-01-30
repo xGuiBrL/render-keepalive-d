@@ -1,0 +1,16 @@
+name: Render Keep Alive D
+
+on:
+  schedule:
+    - cron: "*/5 10-23 * * *"
+    - cron: "*/5 0-1 * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render API
+        run: |
+          echo "Pinging Render (B)..."
+          curl -I --max-time 15 https://TU_API.onrender.com/health || true
