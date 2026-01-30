@@ -13,4 +13,4 @@ jobs:
       - name: Ping Render API
         run: |
           echo "Pinging Render (B)..."
-          curl -I --max-time 15 https://TU_API.onrender.com/health || true
+          curl -I --max-time 15 https://silographql.onrender.com/health || true
